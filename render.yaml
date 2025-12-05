@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: mascris-rust-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    plan: free
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: STEAM_ID
+        sync: false
+      - key: PLAYER_TOKEN
+        sync: false
+      - key: RUST_IP
+        sync: false
+      - key: RUST_PORT
+        sync: false
+      - key: ALERT_CHANNEL_ID
+        sync: false
